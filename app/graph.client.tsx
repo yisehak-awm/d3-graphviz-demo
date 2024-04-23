@@ -8,7 +8,6 @@ export const GraphComp = ({ elements }: any) => {
   const graph = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log("elemets", elements);
     if (!graph.current || !elements) return;
     cytoscape({
       elements,
@@ -17,25 +16,6 @@ export const GraphComp = ({ elements }: any) => {
         name: "dagre",
       },
       style: [
-        {
-          selector: "node",
-          style: {
-            shape: "round-rectangle",
-            label: "data(label)",
-            "text-valign": "center",
-            "text-halign": "center",
-            width: "label",
-            "padding-right": "30px",
-            "padding-left": "30px",
-            "background-color": "#DBE6FA",
-
-            "font-size": 20,
-            "border-width": 1,
-            "border-color": "#5C90EB",
-            "border-style": "solid",
-            color: "#0D306D",
-          },
-        },
         {
           selector: "edge",
           style: {
@@ -48,38 +28,57 @@ export const GraphComp = ({ elements }: any) => {
           },
         },
         {
+          selector: "node",
+          style: {
+            shape: "round-rectangle",
+            label: "data(label)",
+            color: "#001929",
+            width: "label",
+            "text-valign": "center",
+            "text-halign": "center",
+            "padding-right": "30px",
+            "padding-left": "30px",
+            "background-color": "#D6EFFF",
+            "font-size": 20,
+            "border-width": 1,
+            "border-color": "#5CC0FF",
+            "border-style": "solid",
+          },
+        },
+
+        {
           selector: 'node[label*="=&gt;"]',
           style: {
-            "background-color": "#D5D4ED",
-            "border-color": "#716FC3",
-            color: "#3A1D5E",
+            "background-color": "#F4EBFF",
+            "border-color": "#BC85FF",
+            color: "#1C003D",
           },
         },
         {
           selector: 'node[label="and"]',
           style: {
             shape: "diamond",
-            "background-color": "#FCE3B0",
-            "border-color": "#D99308",
-            color: "#624304",
+            "background-color": "#FFECAD",
+            "border-color": "#ffcd2a",
+            color: "#291F00",
           },
         },
         {
           selector: 'node[label="true"]',
           style: {
             shape: "ellipse",
-            "background-color": "#DAE7E0",
-            "border-color": "#57886C",
-            color: "#406450",
+            "background-color": "#DFF6E6",
+            "border-color": "#3FCA6B",
+            color: "#092010",
           },
         },
         {
           selector: 'node[label="false"]',
           style: {
             shape: "ellipse",
-            "background-color": "#FADCDE",
-            "border-color": "#C81D25",
-            color: "#590D12",
+            "background-color": "#FFECEB",
+            "border-color": "#ff9790",
+            color: "#3D0300",
           },
         },
       ],
