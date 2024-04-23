@@ -242,7 +242,7 @@ export default function Index() {
 
   return (
     <>
-      <Suspense fallback="sever">
+      <Suspense fallback="Loading modules ...">
         <GraphComp elements={ele} />
       </Suspense>
     </>
