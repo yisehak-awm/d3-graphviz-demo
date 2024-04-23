@@ -38,7 +38,7 @@ export const GraphComp = ({ elements }: any) => {
             "text-halign": "center",
             "padding-right": "30px",
             "padding-left": "30px",
-            "background-color": "#D6EFFF",
+            "background-color": "#bce3ff",
             "font-size": 20,
             "border-width": 1,
             "border-color": "#5CC0FF",
@@ -49,7 +49,7 @@ export const GraphComp = ({ elements }: any) => {
         {
           selector: 'node[label*="=&gt;"]',
           style: {
-            "background-color": "#F4EBFF",
+            "background-color": "#e4ccff",
             "border-color": "#BC85FF",
             color: "#1C003D",
           },
@@ -58,7 +58,7 @@ export const GraphComp = ({ elements }: any) => {
           selector: 'node[label="and"]',
           style: {
             shape: "diamond",
-            "background-color": "#FFECAD",
+            "background-color": "#ffcd2a",
             "border-color": "#ffcd2a",
             color: "#291F00",
           },
@@ -67,7 +67,7 @@ export const GraphComp = ({ elements }: any) => {
           selector: 'node[label="true"]',
           style: {
             shape: "ellipse",
-            "background-color": "#DFF6E6",
+            "background-color": "#9ce2b0",
             "border-color": "#3FCA6B",
             color: "#092010",
           },
@@ -76,7 +76,7 @@ export const GraphComp = ({ elements }: any) => {
           selector: 'node[label="false"]',
           style: {
             shape: "ellipse",
-            "background-color": "#FFECEB",
+            "background-color": "#ffb8b3",
             "border-color": "#ff9790",
             color: "#3D0300",
           },
