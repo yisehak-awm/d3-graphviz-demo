@@ -47,7 +47,7 @@ export const GraphComp = ({ elements }: any) => {
         },
 
         {
-          selector: 'node[label*="=&gt;"]',
+          selector: 'node[label*="=>"]',
           style: {
             "background-color": "#e4ccff",
             "border-color": "#BC85FF",

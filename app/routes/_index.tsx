@@ -106,12 +106,14 @@ export default function Index() {
 
   useEffect(() => {
     if (!data) return;
+
+    var parser = new DOMParser();
     const elements = {
       nodes: data.objects.map((o: any) => ({
         data: {
           id: "n" + o._gvid.toString(),
           name: o.name,
-          label: o.label,
+          label: parser.parseFromString(o.label, "text/html").body.textContent,
         },
       })),
       edges: data.edges.map((e: any) => ({
