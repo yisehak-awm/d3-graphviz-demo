@@ -128,7 +128,7 @@ export default function Index() {
     const pasteListener = (e: ClipboardEvent) => {
       e.preventDefault();
       const content = e.clipboardData?.getData("text");
-      setData(content || "");
+      setData(JSON.parse(content || "{}") || "");
     };
     addEventListener("paste", pasteListener);
     return () => removeEventListener("paste", pasteListener);
