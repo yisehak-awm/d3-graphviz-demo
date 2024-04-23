@@ -30,7 +30,7 @@ export const GraphComp = ({ elements }: any) => {
             "background-color": "#DBE6FA",
 
             "font-size": 20,
-            "border-width": 3,
+            "border-width": 1,
             "border-color": "#5C90EB",
             "border-style": "solid",
             color: "#0D306D",
